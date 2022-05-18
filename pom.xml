@@ -9,7 +9,7 @@
         <module>service</module>
         <module>server-gateway</module>
     </modules>
-    <!--引入spring boot 父工程1111-->
+    <!--引入spring boot 父工程3333-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
