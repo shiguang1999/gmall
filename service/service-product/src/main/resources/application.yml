@@ -1,0 +1,16 @@
+server:
+  port: 7000     #每种微服务用整数端口 7000
+
+
+  #配置公共资源
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.189.130:3306/gmall_product?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+# Mybatis-Plus
+#mybatis-plus:
+#mapper-locations: classpath*:/mapper/**/*.xml
