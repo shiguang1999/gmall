@@ -11,7 +11,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -57,4 +56,6 @@ public class CategoryServiceImpl implements CategoryService {
         List<BaseCategory3> baseCategory3s = baseCategory3Dao.selectList(baseCategory3QueryWrapper);
         return baseCategory3s;
     }
+
+
 }

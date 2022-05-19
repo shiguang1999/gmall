@@ -20,11 +20,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin/product")
 public class CategoryController {
-
-
     @Autowired
     private CategoryService categoryService;
-
 
     //查询一级分类
     @GetMapping("/getCategory1")
@@ -32,19 +29,27 @@ public class CategoryController {
       List<BaseCategory1> category1List= categoryService.getAllCategory1();
         return Result.ok(category1List);
     }
-
-
     //查询二级分类
     @GetMapping("/getCategory2/{category1Id}")
     public Result getCategory2(@PathVariable("category1Id") Long category1Id) {
         List<BaseCategory2> category2List= categoryService.getAllCategory2(category1Id);
         return Result.ok(category2List);
     }
-
     //查询三级分类
     @GetMapping("/getCategory3/{category2Id}")
     public Result getCategory3(@PathVariable("category2Id") Long category2Id) {
         List<BaseCategory3> category3List= categoryService.getAllCategory3(category2Id);
         return Result.ok(category3List);
     }
+
+
+    /**
+     * 根据分类id获取平台属性
+     * @param category1Id 一级分类
+     * @param category2Id
+     * @param category3Id
+     * @return
+     */
+
+
 }

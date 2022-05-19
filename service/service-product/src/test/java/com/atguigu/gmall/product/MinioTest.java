@@ -1,6 +1,7 @@
 package com.atguigu.gmall.product;
 
 
+import com.atguigu.gmall.product.config.MinioAutoConfiguration;
 import io.minio.MinioClient;
 import io.minio.PutObjectOptions;
 import io.minio.errors.MinioException;
@@ -16,7 +17,6 @@ public class MinioTest {
         try {
             // 使用MinIO服务的URL，端口，Access key和Secret key创建一个MinioClient对象
             MinioClient minioClient = new MinioClient("http://192.168.189.130:9000", "admin", "admin123456");
-
             // 检查存储桶是否已经存在
             boolean isExist = minioClient.bucketExists("gmall");
             if (isExist) {
@@ -30,13 +30,27 @@ public class MinioTest {
             // String objectName,//文件名
             // InputStream stream,//文件流
             // PutObjectOptions options//上传参数的设置项
-
-            FileInputStream stream = new FileInputStream("C:\\Users\\shiguang\\Desktop\\pic\\aa.png");
+            FileInputStream stream = new FileInputStream("C:\\Users\\shiguang\\Desktop\\pic\\girl.jpg");
             PutObjectOptions options = new PutObjectOptions(stream.available(), -1);
-            minioClient.putObject("gmall","aa.png",stream,options);
+            options.setContentType("image/jpeg");
+            minioClient.putObject("gmall","girl.jpg",stream,options);
             System.out.println("上传成功");
         } catch (MinioException e) {
             System.out.println("Error occurred: " + e);
         }
+    }
+
+
+
+    @Test
+    public void minioTest2() throws Exception {
+        MinioAutoConfiguration configuration = new MinioAutoConfiguration();
+        MinioClient minioClient = configuration.minioClient();
+
+        FileInputStream stream = new FileInputStream("C:\\Users\\shiguang\\Desktop\\pic\\girl.jpg");
+        PutObjectOptions options = new PutObjectOptions(stream.available(), -1);
+        options.setContentType("image/jpeg");
+        minioClient.putObject("gmall","girl.jpg",stream,options);
+        System.out.println("上传成功");
     }
 }

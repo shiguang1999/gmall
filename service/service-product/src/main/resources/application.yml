@@ -14,3 +14,11 @@ spring:
 # Mybatis-Plus
 #mybatis-plus:
 #mapper-locations: classpath*:/mapper/**/*.xml
+#String endpoint, String accessKey, String secretKey
+app:
+  minio:
+    endpoint: http://192.168.189.130:9000
+    accessKey: admin
+    secretKey: admin123456
+    bucket: gmall
+

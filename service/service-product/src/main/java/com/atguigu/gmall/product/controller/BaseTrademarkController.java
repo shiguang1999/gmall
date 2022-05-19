@@ -7,8 +7,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/admin/product")
+@RequestMapping("/admin/product/baseTrademark")
 public class BaseTrademarkController {//品牌
 
 
@@ -22,7 +24,7 @@ public class BaseTrademarkController {//品牌
      * @param limit
      * @return
      */
-    @GetMapping("/baseTrademark/{pageNum}/{limit}")
+    @GetMapping("/{pageNum}/{limit}")
     public Result getBaseTrademarkPage(@PathVariable Long pageNum,
                                        @PathVariable Long limit) {
         //Page<BaseTrademark> baseTrademarkPage = baseTrademarkService.getBaseTrademarkPage(pageNum, limit);
@@ -32,7 +34,7 @@ public class BaseTrademarkController {//品牌
     }
 
     //新增品牌
-    @PostMapping("/baseTrademark/save")
+    @PostMapping("/save")
     public Result save(@RequestBody BaseTrademark baseTrademark) {
 
         baseTrademarkService.save(baseTrademark);
@@ -40,7 +42,7 @@ public class BaseTrademarkController {//品牌
     }
 
     //修改前回显
-    @GetMapping("/baseTrademark/get/{id}")
+    @GetMapping("/get/{id}")
     public Result getBaseTrademarkById(@PathVariable Long id) {
 
         BaseTrademark trademark = baseTrademarkService.getById(id);
@@ -48,7 +50,7 @@ public class BaseTrademarkController {//品牌
     }
 
     //修改品牌
-    @PutMapping("/baseTrademark/update")
+    @PutMapping("/update")
     public Result update(@RequestBody BaseTrademark baseTrademark) {
         baseTrademarkService.updateById(baseTrademark);
         return Result.ok();
@@ -56,9 +58,19 @@ public class BaseTrademarkController {//品牌
 
 
     //删除品牌
-    @DeleteMapping("/baseTrademark/remove/{id}")
+    @DeleteMapping("/remove/{id}")
     public Result deleteBaseTrademark(@PathVariable Long id) {
         baseTrademarkService.removeById(id);
         return Result.ok();
+    }
+
+
+    //获取品牌属性
+    @GetMapping("/getTrademarkList")
+    public Result getTrademarkList(){
+
+        List<BaseTrademark> list = baseTrademarkService.list();
+
+        return Result.ok(list);
     }
 }

@@ -51,6 +51,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--minio文件上传-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>7.0.2</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -24,4 +24,5 @@ public interface CategoryService {
     //查询三级分类
     List<BaseCategory3> getAllCategory3(Long category2Id);
 
+
 }
