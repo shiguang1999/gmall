@@ -1,0 +1,35 @@
+{
+  "code": 200,
+  "message": "成功",
+  "data": [
+    {
+      "id": 53,
+      "spuId": 26,
+      "baseSaleAttrId": 1,
+      "saleAttrName": "选择颜色",
+      "spuSaleAttrValueList": null
+    },
+    {
+      "id": 53,
+      "spuId": 26,
+      "baseSaleAttrId": 1,
+      "saleAttrName": "选择颜色",
+      "spuSaleAttrValueList": null
+    },
+    {
+      "id": 54,
+      "spuId": 26,
+      "baseSaleAttrId": 2,
+      "saleAttrName": "选择版本",
+      "spuSaleAttrValueList": null
+    },
+    {
+      "id": 54,
+      "spuId": 26,
+      "baseSaleAttrId": 2,
+      "saleAttrName": "选择版本",
+      "spuSaleAttrValueList": null
+    }
+  ],
+  "ok": true
+}

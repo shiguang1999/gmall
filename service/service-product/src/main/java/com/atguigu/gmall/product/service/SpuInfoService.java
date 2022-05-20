@@ -19,4 +19,9 @@ public interface SpuInfoService extends IService<SpuInfo> {
     List<BaseSaleAttr> getBaseSaleAttrList();
 
 
+    /**
+     * 保存spuInfo
+     * @param spuInfo
+     */
+    void saveSpuInfo(SpuInfo spuInfo);
 }

@@ -1,0 +1,79 @@
+{
+  "id": null,
+  "spuName": "OPPO Find X5 骁龙888 自研影像芯片 哈苏影像 5000万像素双主摄 ",
+  "description": "品牌： OPPO\n商品名称：OPPOOPPO Find X5商品编号：10044463049581商品毛重：0.65kg运行内存：8GB分辨率：其他充电器：其他机身内存：128GB系统：Android",
+  "category3Id": 61,
+  "spuImageList": [
+    {
+      "imgName": "3.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/8d332df0016b4cdbab66f3b5ddeaad2e3.png"
+    },
+    {
+      "imgName": "4.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/8636bedb49824a149f953a30fe1f256e4.png"
+    },
+    {
+      "imgName": "2.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/f748afb544514de3b21ab1aad69206a02.png"
+    },
+    {
+      "imgName": "5.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/181403da9eea4323bae77dc4c0545a5c5.png"
+    },
+    {
+      "imgName": "1.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/32c93af7df29487ca5b288d7779779921.png"
+    },
+    {
+      "imgName": "3.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/9a071816a1f144428fa98d17311cfc7c3.png"
+    },
+    {
+      "imgName": "5.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/422ce6edfa854d7eb8fadbd01410f3485.png"
+    },
+    {
+      "imgName": "1.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/2f92e6a68290448c821b338677ff4f711.png"
+    },
+    {
+      "imgName": "4.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/a0d63d57ca134545b29a6c7f66abec5b4.png"
+    },
+    {
+      "imgName": "2.png",
+      "imgUrl": "http://192.168.189.130:9000/gmall/6eedbf00351c44b9a6ce890b793a371a2.png"
+    }
+  ],
+  "spuSaleAttrList": [
+    {
+      "baseSaleAttrId": "1",
+      "saleAttrName": "选择颜色",
+      "spuSaleAttrValueList": [
+        {
+          "baseSaleAttrId": "1",
+          "saleAttrValueName": "白色"
+        },
+        {
+          "baseSaleAttrId": "1",
+          "saleAttrValueName": "黑色"
+        }
+      ]
+    },
+    {
+      "baseSaleAttrId": "2",
+      "saleAttrName": "选择版本",
+      "spuSaleAttrValueList": [
+        {
+          "baseSaleAttrId": "2",
+          "saleAttrValueName": "8g+128g"
+        },
+        {
+          "baseSaleAttrId": "2",
+          "saleAttrValueName": "16g+256g"
+        }
+      ]
+    }
+  ],
+  "tmId": 5
+}

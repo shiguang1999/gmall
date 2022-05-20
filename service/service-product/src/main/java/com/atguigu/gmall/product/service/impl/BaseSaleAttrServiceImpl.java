@@ -1,7 +1,9 @@
 package com.atguigu.gmall.product.service.impl;
 
 import com.atguigu.gmall.model.product.BaseSaleAttr;
+import com.atguigu.gmall.model.product.SpuSaleAttr;
 import com.atguigu.gmall.product.mapper.BaseSaleAttrMapper;
+import com.atguigu.gmall.product.mapper.SpuSaleAttrValueMapper;
 import com.atguigu.gmall.product.service.BaseSaleAttrService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +21,15 @@ public class BaseSaleAttrServiceImpl extends ServiceImpl<BaseSaleAttrMapper, Bas
     implements BaseSaleAttrService{
 
     @Autowired
-    BaseSaleAttrMapper baseSaleAttrMapper;
+    SpuSaleAttrValueMapper saleAttrValueMapper;
     @Override
-    public List<BaseSaleAttr> getBaseSaleAttrList() {
+    public List<SpuSaleAttr> getSpuSaleAttrAndValue(Long spuId) {
+        List<SpuSaleAttr> spuSaleAttrs = saleAttrValueMapper.getSpuSaleAttrAndValue(spuId);
 
-        List<BaseSaleAttr> baseSaleAttrList = baseSaleAttrMapper.selectList(null);
-        return baseSaleAttrList;
+        return spuSaleAttrs;
     }
+
+
 }
 
 
